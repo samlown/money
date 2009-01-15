@@ -136,11 +136,33 @@ class Money
     cents == 0
   end
 
+  def with_tax(tax)
+    Money.new(@cents * (1 + tax))
+  end
+
+  # Calculates compound interest
+  # Returns a money object with the sum of self + it
+  def compound_interest(rate,count=1)
+
+    Money.new(cents * ((1 + rate / 100.0 / 12) ** count - 1))
+  end
+
+  # Calculate self + simple interest
+  def simple_interest(rate,count=1)
+    Money.new(rate/100/12*cents*count)
+  end
+
+  def with_simple_interest(rate,count=1)
+  end
+
   # Split money in installments
   # So US$ 10.00 == [ 3.33, 3.33, 3.34 ]
-  def split_in_installments(fixnum,first=false)
+  def split_in_installments(fixnum,extra=nil,*opts)
     arr = Array.new(fixnum, Money.new(cents/fixnum,currency))
-    arr[first ? 0 : -1] += Money.new(cents % fixnum)
+
+    if opts.include?(:simple_interest)
+    end
+    arr[-1] += Money.new(cents % fixnum)
     arr
   end
 
@@ -224,7 +246,8 @@ class Money
     exchange_to("EUR")
   end
 
-  # Recieve a money object as Brazilian Real.
+  # Recieve a money object with the same amount as the current Money object
+  # in real
   def as_real
     exchange_to("BRL")
   end
@@ -234,3 +257,4 @@ class Money
     self
   end
 end
+
