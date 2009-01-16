@@ -1,0 +1,31 @@
+# Logfile created on Fri Jan 16 19:53:47 -0200 2009 by /
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (73.0ms)[0m   [0mCREATE TABLE "accountss" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "accountss" already exists: CREATE TABLE "accountss" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (102.9ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "accounts" already exists: CREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mAccount Load (0.2ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (99.3ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (99.1ms)[0m   [0;1mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value" integer) [0m

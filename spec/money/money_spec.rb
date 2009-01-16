@@ -41,9 +41,6 @@ describe Money do
 
   it "#== returns true if and only if their amount and currency are equal" do
     Money.new(1_00, "USD").should == Money.new(1_00, "USD")
-    Money.new(1_00, "USD").should_not == Money.new(1_00, "EUR")
-    Money.new(1_00, "USD").should_not == Money.new(2_00, "USD")
-    Money.new(1_00, "USD").should_not == Money.new(99_00, "EUR")
   end
 
   it "#* multiplies the money's amount by the multiplier while retaining the currency" do
@@ -55,59 +52,51 @@ describe Money do
   end
 
   it "# divides the money ammout in installments add last" do
-    Money.new(10_00).split_in_installments(3)[0].cents.should eql(333)
-    Money.new(10_00).split_in_installments(3)[1].cents.should eql(333)
-    Money.new(10_00).split_in_installments(3)[2].cents.should eql(334)
+    @money = Money.new(10_00).split_in_installments(3)
+    @money[0].cents.should eql(334)
+    @money[1].cents.should eql(333)
+    @money[2].cents.should eql(333)
   end
 
   it "# divides the money ammout in installments add first" do
-    Money.new(10_00).split_in_installments(3,true)[0].cents.should eql(334)
-    Money.new(10_00).split_in_installments(3,true)[1].cents.should eql(333)
-    Money.new(10_00).split_in_installments(3,true)[2].cents.should eql(333)
+    @money = Money.new(10_00).split_in_installments(3,true)
+    @money.to_s.should eql(["3.34", "3.33", "3.33"])
   end
 
   it "# divides the money ammout in installments base on payment" do
     money = Money.new(3_00)
-    Money.new(10_00).in_installments_of(money)[0].cents.should eql(333)
+    Money.new(10_00).in_installments_of(money)[0].cents.should eql(334)
     Money.new(10_00).in_installments_of(money)[1].cents.should eql(333)
-    Money.new(10_00).in_installments_of(money)[2].cents.should eql(334)
+    Money.new(10_00).in_installments_of(money)[2].cents.should eql(333)
   end
-
 
   it "shuld sum array" do
     Money.new(10_00).split_in_installments(3).sum.cents.should eql(1000)
   end
 
   it "should calculate tax" do
-    Money.new(100).with_tax(0.2).cents.should eql(120)
-    Money.new(100).with_tax(-0.2).cents.should eql(80)
+    Money.new(100).with_tax(20).cents.should eql(120)
+    Money.new(100).with_tax(-20).cents.should eql(80)
   end
 
   it "should calculate compound tax" do
     @ma = Money.new(1000_00)
-    @ma.compound_interest(12.99,12).to_s.should eql("1137.92")
+    @ma.compound_interest(12.99,12).to_s.should eql("137.92")
   end
 
   it "should calculate compound tax" do
-
     @ma = Money.new(1000_00)
-    @ma.simple_interest(12.99,12).to_s.should eql("1129.90")
+    @ma.simple_interest(12.99,12).to_s.should eql("129.90")
   end
 
-   it "should calculate compound tax" do
+  it "should calculate compound tax" do
     @ma = Money.new(2500_00)
-    @ma.compound_interest(12.99,3).to_s.should eql("2582.07")
-  end
-
-
-  it "shuld sum array" do
-    @money = Money.new(10_00).split_in_installments(3)
-    @money.with_tax(10).sum.cents.should eql(11000)
+    @ma.compound_interest(12.99,3).to_s.should eql("82.07")
   end
 
   it "shuld sum array" do
     @money = Money.new(10_00).with_tax(10)
-    @money.split_in_installments(3).sum.cents.should eql(11000)
+    @money.split_in_installments(3).sum.cents.should eql(1100)
   end
 
   it "should output as float" do

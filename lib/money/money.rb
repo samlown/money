@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'money/variable_exchange_bank'
 
 # Represents an amount of money in a certain currency.
@@ -136,10 +137,6 @@ class Money
     cents == 0
   end
 
-  def with_tax(tax)
-    Money.new(@cents * (1 + tax))
-  end
-
   # Calculates compound interest
   # Returns a money object with the sum of self + it
   def compound_interest(rate,count=1)
@@ -156,14 +153,12 @@ class Money
   end
 
   # Split money in installments
-  # So US$ 10.00 == [ 3.33, 3.33, 3.34 ]
+  # So US$ 10.00 == [ 3.34, 3.33, 3.33 ]
   def split_in_installments(fixnum,extra=nil,*opts)
-    arr = Array.new(fixnum, Money.new(cents/fixnum,currency))
-
-    if opts.include?(:simple_interest)
-    end
-    arr[-1] += Money.new(cents % fixnum)
-    arr
+    wallet = Wallet.new(fixnum, Money.new(cents/fixnum,currency))
+    to_add = cents % fixnum
+    to_add.times { |m| wallet[m] += Money.new(1) }
+    wallet
   end
 
   # Split money in installments based on payment value
@@ -171,16 +166,21 @@ class Money
     split_in_installments(cents/other_money.cents,first)
   end
 
+  # Just a helper if you got tax inputs in percentage.
+  # Ie. with_tax(20) =>  cents * 1.20
+  def with_tax(tax)
+    Money.new(cents + cents / 100 * tax)
+  end
 
   # Format the price according to several rules
-  # Currently supported are :with_currency, :no_cents and :html
+  # Currently supported are :with_currency, :no_cents, :symbol and :html
   #
   # with_currency:
   #
   #  Money.ca_dollar(0).format => "free"
   #  Money.ca_dollar(100).format => "$1.00"
-  #  Money.ca_dollar(100).format(:with_currency) => "$1.00 CAD"
-  #  Money.us_dollar(85).format(:with_currency) => "$0.85 USD"
+  #  Money.ca_dollar(100).format(:with_currency => true) => "$1.00 CAD"
+  #  Money.us_dollar(85).format(:with_currency => true) => "$0.85 USD"
   #
   # no_cents:
   #
@@ -190,10 +190,14 @@ class Money
   #  Money.ca_dollar(570).format(:no_cents, :with_currency) => "$5 CAD"
   #  Money.ca_dollar(39000).format(:no_cents) => "$390"
   #
+  # symbol:
+  #
+  #  Money.new(100, :currency => "GBP").format(:symbol => "£") => "£1.00"
+  #
   # html:
   #
-  #  Money.ca_dollar(570).format(:html, :with_currency) =>  "$5.70 <span class=\"currency\">CAD</span>"
-  def format(*rules)
+  #  Money.ca_dollar(570).format(:html => true, :with_currency => true) =>  "$5.70 <span class=\"currency\">CAD</span>"
+  def format(rules = {})
     return "free" if cents == 0
 
     rules = rules.flatten
@@ -204,11 +208,11 @@ class Money
       formatted = sprintf("$%.2f", cents.to_f / 100  )
     end
 
-    if rules.include?(:with_currency)
+    if rules[:with_currency]
       formatted << " "
-      formatted << '<span class="currency">' if rules.include?(:html)
+      formatted << '<span class="currency">' if rules[:html]
       formatted << currency
-      formatted << '</span>' if rules.include?(:html)
+      formatted << '</span>' if rules[:html]
     end
     formatted
   end
@@ -258,3 +262,14 @@ class Money
   end
 end
 
+class Wallet < Array
+
+
+  def to_s
+    map &:to_s
+  end
+
+  def sum
+    Money.new(inject(0){ |sum,m| sum + m.cents })
+  end
+end
