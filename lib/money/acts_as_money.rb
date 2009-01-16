@@ -10,9 +10,9 @@ module ActsAsMoney #:nodoc:
     # has_money :attr1, :attr2
     #
     # Opts:
-    # :cents => "cents"
-    # :currency => "BRL"
-    # :allow_nil => false
+    # :cents => "pennys"      #=>  attr1_pennys
+    # :currency => "currency" #=>  attr1_currency
+    # :allow_nil => true
     # :with_currency => true
     #
     def has_money(*attributes)
@@ -26,7 +26,7 @@ module ActsAsMoney #:nodoc:
         mapping << ["#{attr}_#{config[:currency]}", 'currency'] if config[:with_currency]
 
         composed_of attr, :class_name => 'Money',:allow_nil => config[:allow_nil],
-           :mapping => mapping, :converter => lambda {|m| m.to_money }
+           :mapping => mapping, :converter => config[:converter]
       end
 
     end

@@ -1,12 +1,12 @@
 require File.dirname(__FILE__) + '/../spec_helper.rb'
 require File.dirname(__FILE__) + '/../../rails/init.rb'
-require 'activerecord'
 
+# Uncomment this once to create the db
 #load_schema
+
 class Account < ActiveRecord::Base
   has_money :value, :total
 end
-
 
 
 describe "Acts as Money" do
@@ -24,7 +24,11 @@ describe "Acts as Money" do
     @account.total.to_s.should eql("10.00")
   end
 
-  it "should set currency" do
+  it "should map cents" do
+    @account.value_cents.to_s.should eql("1000")
+  end
+
+  it "should map currency" do
     @account.value_currency.should eql("USD")
   end
 
