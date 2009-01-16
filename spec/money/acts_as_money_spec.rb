@@ -25,7 +25,7 @@ describe "Acts as Money" do
   end
 
   it "should map cents" do
-    @account.value_cents.to_s.should eql("1000")
+    @account.value_in_cents.to_s.should eql("1000")
   end
 
   it "should map currency" do

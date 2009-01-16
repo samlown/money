@@ -6,18 +6,23 @@ module ActsAsMoney #:nodoc:
   end
 
   module ClassMethods
+    # class Product
+    #   has_money :value, :tax
+    # end
     #
-    # has_money :attr1, :attr2
+    # @product.value.class      #=>  "Money"
+    # @product.value_in_cents   #=>  "1000"
+    # @product.tax_currency     #=>  "USD"
     #
     # Opts:
-    # :cents => "pennys"      #=>  attr1_pennys
-    # :currency => "currency" #=>  attr1_currency
+    # :cents => "pennys"        #=>  tax_pennys
+    # :currency => "currency"   #=>  tax_currency
     # :allow_nil => true
     # :with_currency => true
     #
     def has_money(*attributes)
       config = {
-        :allow_nil => true, :currency => "currency", :cents => "cents",
+        :allow_nil => true, :currency => "currency", :cents => "in_cents",
         :with_currency => true, :converter => lambda { |m| m.to_money }
       }.merge(attributes.extract_options!)
 
