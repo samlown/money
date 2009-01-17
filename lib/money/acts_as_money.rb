@@ -16,20 +16,18 @@ module ActsAsMoney #:nodoc:
     # @product.tax_currency     #=>  "USD"
     #
     # Opts:
-    # :cents => "pennys"        #=>  tax_pennys
-    # :currency => "currency"   #=>  tax_currency
+    # :cents => "pennys"        #=>  @product.pennys
+    # :currency => "currency"   #=>  @product.currency
     # :allow_nil => true
     # :with_currency => true
     #
     def has_money(*attributes)
-      config = {
-        :allow_nil => true, :currency => "currency", :cents => "in_cents",
-        :with_currency => true, :converter => lambda { |m| m.to_money }
-      }.update(attributes.extract_options!)
+      config = {:with_currency => true, :converter => lambda { |m| m.to_money },
+                :allow_nil => true }.update(attributes.extract_options!)
 
       attributes.each do |attr|
-        mapping = [["#{attr}_#{config[:cents]}", 'cents']]
-        mapping << ["#{attr}_#{config[:currency]}", 'currency'] if config[:with_currency]
+        mapping = [[config[:cents] || "#{attr}_in_cents", 'cents']]
+        mapping << [config[:currency] || "#{attr}_currency", 'currency'] if config[:with_currency]
 
         composed_of attr, :class_name => 'Money',:allow_nil => config[:allow_nil],
            :mapping => mapping, :converter => config[:converter]

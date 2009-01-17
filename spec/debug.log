@@ -2717,3 +2717,1242 @@
   [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
   [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, 200)[0m
   [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, 200)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (64.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.7ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.7ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (58.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (38.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (1.0ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (83.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (1.0ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (42.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (59.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (23.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (58.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.3ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.9ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.5ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES(NULL, NULL, NULL, NULL)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.7ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (62.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.8ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (21.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (8.8ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.7ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (41.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.8ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (43.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (11.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (20.9ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.7ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (42.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (41.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.9ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.0ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (37.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.7ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (45.3ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (11.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.9ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (11.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (44.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.7ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (111.0ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.6ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.3ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (10.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (7.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (59.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.9ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (44.3ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (11.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (12.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.8ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (13.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (48.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.5ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.3ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (10.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.8ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.6ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (72.7ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.7ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (44.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.7ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (35.2ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.9ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (44.7ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.6ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (45.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (18.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.6ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.8ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (5.9ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.8ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.7ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.9ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (43.7ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.5ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.4ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (39.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.9ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.8ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (41.5ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.5ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.6ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (43.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.6ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES(NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (38.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (6.2ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.7ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.7ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (40.8ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (14.6ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (13.2ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (19.3ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (10.7ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.4ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (74.9ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.3ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (13.1ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (11.6ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.4ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (1.4ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.5ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (67.7ms)[0m   [0;1mDROP TABLE "accounts"[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mCREATE TABLE "accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "total_in_cents" integer, "value_currency" varchar(255), "total_currency" varchar(255)) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (8.7ms)[0m   [0mDROP TABLE "products"[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "value_in_cents" integer, "tax_pennys" integer, "value_currency" varchar(255)) [0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Load (0.7ms)[0m   [0mSELECT * FROM "accounts" LIMIT 1[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mAccount Create (0.5ms)[0m   [0mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;36;1mAccount Create (0.4ms)[0m   [0;1mINSERT INTO "accounts" ("value_currency", "total_currency", "value_in_cents", "total_in_cents") VALUES('USD', 'BRL', 1000, 2000)[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m
+  [4;36;1mProduct Create (0.4ms)[0m   [0;1mINSERT INTO "products" ("value_currency", "value_in_cents", "tax_pennys") VALUES('USD', 1000, NULL)[0m

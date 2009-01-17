@@ -71,7 +71,6 @@ class Money
     Money.default_bank.add_rate(from_currency, to_currency, rate)
   end
 
-
   # Creates a new money object.
   #  Money.new(100)
   #
@@ -264,7 +263,6 @@ end
 
 class Wallet < Array
 
-
   def to_s
     map &:to_s
   end
@@ -272,4 +270,5 @@ class Wallet < Array
   def sum
     Money.new(inject(0){ |sum,m| sum + m.cents })
   end
+
 end

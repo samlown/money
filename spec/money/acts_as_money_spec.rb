@@ -9,7 +9,8 @@ class Account < ActiveRecord::Base
 end
 
 class Product < ActiveRecord::Base
-  has_money :value, :tax, :cents => "pennys", :with_currency => false
+  has_money :value
+  has_money :tax, :cents => "pennys", :with_currency => false
 end
 
 describe "Acts as Money" do
@@ -51,7 +52,7 @@ describe "Acts as Money" do
     end
 
     it "should map attributes" do
-      @product.tax_pennys.should eql(200)
+      @product.pennys.should eql(200)
     end
 
     it "should map currency on tax" do
