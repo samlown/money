@@ -20,9 +20,9 @@ class String
   #   '$100 USD'.to_money   # => #<Money @cents=10000, @currency="USD">
   def to_money
     # Get the currency.
-    matches = scan /([A-Z]{2,3})/ 
+    matches = scan /([A-Z]{2,3})/
     currency = matches[0] ? matches[0][0] : Money.default_currency
-    
+
     # Get the cents amount
     sans_spaces = gsub(/\s+/, '')
     matches = sans_spaces.scan /(\-?\d+(?:[\.,]\d+)?)/
@@ -32,7 +32,7 @@ class String
             else
               0
             end
-    
+
     Money.new(cents, currency)
   end
 end

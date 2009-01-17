@@ -6,8 +6,9 @@ module ActsAsMoney #:nodoc:
   end
 
   module ClassMethods
+    #
     # class Product
-    #   has_money :value, :tax
+    #   has_money :value, :tax, :opts => opts
     # end
     #
     # @product.value.class      #=>  "Money"
@@ -24,7 +25,7 @@ module ActsAsMoney #:nodoc:
       config = {
         :allow_nil => true, :currency => "currency", :cents => "in_cents",
         :with_currency => true, :converter => lambda { |m| m.to_money }
-      }.merge(attributes.extract_options!)
+      }.update(attributes.extract_options!)
 
       attributes.each do |attr|
         mapping = [["#{attr}_#{config[:cents]}", 'cents']]

@@ -1,35 +1,39 @@
 require File.dirname(__FILE__) + '/../spec_helper.rb'
 
 describe "Money core extensions" do
-  specify "Numberic#to_money works" do
-    money = 1234.to_money
-    money.cents.should == 1234_00
-    money.currency.should == Money.default_currency
+  describe "Numberic#to_money works" do
+    it "should convert integer to money" do
+      money = 1234.to_money
+      money.cents.should == 1234_00
+      money.currency.should == Money.default_currency
+    end
 
-    money = 100.37.to_money
-    money.cents.should == 100_37
-    money.currency.should == Money.default_currency
+    it "should convert float to money" do
+      money = 100.37.to_money
+      money.cents.should == 100_37
+      money.currency.should == Money.default_currency
+    end
   end
 
-  specify "String#to_money works" do
-    "100".to_money.should == Money.new(100_00)
-    "100.37".to_money.should == Money.new(100_37)
-    "100,37".to_money.should == Money.new(100_37)
-    "100 000".to_money.should == Money.new(100_000_00)
+  describe "String#to_money works" do
+    it { "100".to_money.should == Money.new(100_00) }
+    it { "100.37".to_money.should == Money.new(100_37) }
+    it { "100,37".to_money.should == Money.new(100_37) }
+    it { "100 000".to_money.should == Money.new(100_000_00) }
 
-    "100 USD".to_money.should == Money.new(100_00, "USD")
-    "-100 USD".to_money.should == Money.new(-100_00, "USD")
-    "100 EUR".to_money.should == Money.new(100_00, "EUR")
-    "100.37 EUR".to_money.should == Money.new(100_37, "EUR")
-    "100,37 EUR".to_money.should == Money.new(100_37, "EUR")
+    it { "100 USD".to_money.should == Money.new(100_00, "USD") }
+    it { "-100 USD".to_money.should == Money.new(-100_00, "USD") }
+    it { "100 EUR".to_money.should == Money.new(100_00, "EUR") }
+    it { "100.37 EUR".to_money.should == Money.new(100_37, "EUR") }
+    it { "100,37 EUR".to_money.should == Money.new(100_37, "EUR") }
 
-    "USD 100".to_money.should == Money.new(100_00, "USD")
-    "EUR 100".to_money.should == Money.new(100_00, "EUR")
-    "EUR 100.37".to_money.should == Money.new(100_37, "EUR")
-    "CAD -100.37".to_money.should == Money.new(-100_37, "CAD")
-    "EUR 100,37".to_money.should == Money.new(100_37, "EUR")
-    "EUR -100,37".to_money.should == Money.new(-100_37, "EUR")
+    it { "USD 100".to_money.should == Money.new(100_00, "USD") }
+    it { "EUR 100".to_money.should == Money.new(100_00, "EUR") }
+    it { "EUR 100.37".to_money.should == Money.new(100_37, "EUR") }
+    it { "CAD -100.37".to_money.should == Money.new(-100_37, "CAD") }
+    it { "EUR 100,37".to_money.should == Money.new(100_37, "EUR") }
+    it { "EUR -100,37".to_money.should == Money.new(-100_37, "EUR") }
 
-    "$100 USD".to_money.should == Money.new(100_00, "USD")
+    it {"$100 USD".to_money.should == Money.new(100_00, "USD") }
   end
 end

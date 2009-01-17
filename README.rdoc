@@ -43,6 +43,7 @@ The development version (hosted on Github) can be installed with:
   Money.new(1000, "USD") == Money.new(100, "USD")    # => false
   Money.new(1000, "USD") == Money.new(1000, "EUR")   # => false
 
+
 === Currency Exchange
 
 Exchanging money is performed through an exchange bank object. The default
@@ -68,19 +69,20 @@ www.xe.com for the current rates or just returns <tt>rand(2)</tt>:
 
   Money.default_bank = ExchangeBankWhichScrapesXeDotCom.new
 
+
 === Ruby on Rails
 
-Use the +compose_of+ helper to let Active Record deal with embedding the money
-object in your models. The following example requires a +cents+ and a +currency+
-field.
+Use the +has_many+ helper to embed the money object in your models.
+The following example requires a +price_in_cents+ and a +price_currency+
+fields.
 
 config/enviroment.rb
 
   require.gem 'nofxx-money', :lib => 'money'
 
-app/models/product_unit.rb
+app/models/product.rb
 
-  class ProductUnit < ActiveRecord::Base
+  class Product < ActiveRecord::Base
     belongs_to :product
     has_money :price
 
@@ -88,12 +90,20 @@ app/models/product_unit.rb
       validate :cents_not_zero
 
       def cents_not_zero
-        errors.add("cents", "cannot be zero or less") unless cents > 0
+        errors.add("price_in_cents", "cannot be zero or less") unless cents > 0
       end
 
       validates_presence_of :sku, :currency
       validates_uniqueness_of :sku
   end
+
+migration:
+
+  create_table :products do |t|
+    t.integer :price_in_cents
+    t.string  :price_currency
+  end
+
 
 === Default Currency
 
@@ -103,8 +113,9 @@ By default Money defaults to USD as its currency. This can be overwritten using
 
 If you use Rails, then environment.rb is a very good place to put this.
 
+
 == TODO
 
-* Bettter validation
+* Better validation
 * Interest (almost there..)
 
