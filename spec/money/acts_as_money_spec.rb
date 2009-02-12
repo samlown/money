@@ -5,15 +5,27 @@ require File.dirname(__FILE__) + '/../../rails/init.rb'
 load_schema
 
 class Account < ActiveRecord::Base
-  has_money :value, :total
+  has_money :value, :total, :allow_nil => true
 end
 
 class Product < ActiveRecord::Base
   has_money :value
   has_money :tax, :cents => "pennys", :with_currency => false
+
+  validates_presence_of :value
 end
 
 describe "Acts as Money" do
+
+      it "should require money" do
+      @account = Account.create(:value => nil)
+      @account.value_in_cents.should eql(0)
+    end
+
+      it "should require money" do
+      @product_fake = Product.create(:value => nil)
+      @product_fake.value_in_cents.should eql(0)
+    end
 
   describe "Account" do
 
@@ -58,6 +70,8 @@ describe "Acts as Money" do
     it "should map currency on tax" do
       @product.should_not respond_to(:tax_currency)
     end
+
+
 
   end
 

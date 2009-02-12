@@ -23,7 +23,7 @@ module ActsAsMoney #:nodoc:
     #
     def has_money(*attributes)
       config = {:with_currency => true, :converter => lambda { |m| m.to_money },
-                :allow_nil => true }.update(attributes.extract_options!)
+                :allow_nil => false }.update(attributes.extract_options!)
 
       attributes.each do |attr|
         mapping = [[config[:cents] || "#{attr}_in_cents", 'cents']]

@@ -36,3 +36,4 @@ class String
     Money.new(cents, currency)
   end
 end
+

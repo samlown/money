@@ -14,26 +14,16 @@ class Money
     #
     #   bank1 = MyBank.new
     #   bank2 = MyOtherBank.new
-    #
-    #   Money.default_bank = bank1
-    #   money1 = Money.new(10)
-    #   money1.bank  # => bank1
-    #
-    #   Money.default_bank = bank2
-    #   money2 = Money.new(10)
-    #   money2.bank  # => bank2
-    #   money1.bank  # => bank1
-    #
-    # The default value for this property is an instance if VariableExchangeBank.
+    #e if VariableExchangeBank.
     # It allows one to specify custom exchange rates:
     #
     #   Money.default_bank.add_rate("USD", "CAD", 1.24515)
     #   Money.default_bank.add_rate("CAD", "USD", 0.803115)
-    #   Money.us_dollar(100).exchange_to("CAD")  # => Money.ca_dollar(124)
+    #   Money.us_dollar(100).exchange_to("CAD")  # => MONEY.ca_dollar(124)
     #   Money.ca_dollar(100).exchange_to("USD")  # => Money.us_dollar(80)
     attr_accessor :default_bank
 
-    # The default currency, which is used when <tt>Money.new</tt> is called
+    # the default currency, which is used when <tt>Money.new</tt> is called
     # without an explicit currency argument. The default value is "USD".
     attr_accessor :default_currency
   end
@@ -77,7 +67,7 @@ class Money
   # Alternativly you can use the convinience methods like
   # Money.ca_dollar and Money.us_dollar
   def initialize(cents, currency = Money.default_currency, bank = Money.default_bank)
-    @cents = cents.round
+    @cents = cents.round # ? cents.round : 0
     @currency = currency
     @bank = bank
   end
@@ -261,6 +251,10 @@ class Money
   end
 end
 
+#
+# Represent a financial array.
+# Investment/Time/Installments...
+#
 class Wallet < Array
 
   def to_s
