@@ -90,7 +90,7 @@ app/models/product.rb
       validate :cents_not_zero
 
       def cents_not_zero
-        errors.add("price_in_cents", "cannot be zero or less") unless cents > 0
+        errors.add("price_cents", "cannot be zero or less") unless cents > 0
       end
 
       validates_presence_of :sku, :currency
@@ -100,7 +100,7 @@ app/models/product.rb
 migration:
 
   create_table :products do |t|
-    t.integer :price_in_cents
+    t.integer :price_cents
     t.string  :price_currency
   end
 

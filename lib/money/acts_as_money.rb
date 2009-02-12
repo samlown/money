@@ -26,7 +26,7 @@ module ActsAsMoney #:nodoc:
                 :allow_nil => false }.update(attributes.extract_options!)
 
       attributes.each do |attr|
-        mapping = [[config[:cents] || "#{attr}_in_cents", 'cents']]
+        mapping = [[config[:cents] || "#{attr}_cents", 'cents']]
         mapping << [config[:currency] || "#{attr}_currency", 'currency'] if config[:with_currency]
 
         composed_of attr, :class_name => 'Money',:allow_nil => config[:allow_nil],
