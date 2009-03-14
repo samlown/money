@@ -21,12 +21,12 @@ Resources:
 
 Install stable releases with the following command:
 
-  gem install nofxx-money
+  gem install ShadowBelmolve-money
 
 The development version (hosted on Github) can be installed with:
 
   gem sources -a http://gems.github.com
-  gem install nofxx-money
+  gem install ShadowBelmolve-money
 
 == Usage
 
@@ -78,7 +78,7 @@ fields.
 
 config/enviroment.rb
 
-  require.gem 'nofxx-money', :lib => 'money'
+  require.gem 'ShadowBelmolve-money', :lib => 'money'
 
 app/models/product.rb
 
