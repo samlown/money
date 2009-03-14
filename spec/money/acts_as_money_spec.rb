@@ -9,7 +9,7 @@ class Account < ActiveRecord::Base
 end
 
 class Product < ActiveRecord::Base
-  has_money :value
+  has_money :value, :allow_nil => false
   has_money :tax, :cents => "pennys", :with_currency => false
 
   validates_presence_of :value
@@ -19,19 +19,30 @@ describe "Acts as Money" do
 
     it "should require money" do
       @account = Account.create(:value => nil)
-    pending
-      @account.value_in_cents.should eql(0)
+      p @account.errors
+      @account.should have(1).errors
+    end
+
+    it "should require money" do
+      @product = Product.create(:value => nil)
+      @product.should have(1).errors
     end
 
     it "should require money" do
       @product_fake = Product.create(:value => nil)
-      @product_fake.value_in_cents.should eql(0)
+      @product_fake.value_cents.should eql(0)
     end
+
+    it "should create" do
+     @account = Account.create!(:value => 10, :total => "20 BRL")
+     @account.should be_valid
+    end
+
 
   describe "Account" do
 
     before(:each) do
-      @account = Account.create(:value => 10, :total => "20 BRL")
+      @account = Account.create!(:value => 10, :total => "20 BRL")
     end
 
     it "should return an instance of Money" do
@@ -39,6 +50,7 @@ describe "Acts as Money" do
     end
 
     it "should write to the db" do
+      p @account
       @account.value.to_s.should eql("10.00")
     end
 
