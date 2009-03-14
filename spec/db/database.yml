@@ -1,4 +1,4 @@
 adapter: sqlite3
-database: spec/db/acts_as_money.sqlite3
+database: tmp/acts_as_money.sqlite3
 pool: 5
 timeout: 5000

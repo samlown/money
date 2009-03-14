@@ -17,12 +17,13 @@ end
 
 describe "Acts as Money" do
 
-      it "should require money" do
+    it "should require money" do
       @account = Account.create(:value => nil)
+    pending
       @account.value_in_cents.should eql(0)
     end
 
-      it "should require money" do
+    it "should require money" do
       @product_fake = Product.create(:value => nil)
       @product_fake.value_in_cents.should eql(0)
     end
@@ -38,7 +39,7 @@ describe "Acts as Money" do
     end
 
     it "should write to the db" do
-      Account.first.value.to_s.should eql("10.00")
+      @account.value.to_s.should eql("10.00")
     end
 
     it "should include nicely" do
@@ -47,7 +48,7 @@ describe "Acts as Money" do
     end
 
     it "should map cents" do
-      @account.value_in_cents.to_s.should eql("1000")
+      @account.value_cents.to_s.should eql("1000")
     end
 
     it "should map currency" do
@@ -70,8 +71,6 @@ describe "Acts as Money" do
     it "should map currency on tax" do
       @product.should_not respond_to(:tax_currency)
     end
-
-
 
   end
 
