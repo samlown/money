@@ -131,6 +131,10 @@ describe Money do
     Money.add_rate("EUR", "USD", 10)
     Money.new(10_00, "EUR").exchange_to("USD").should == Money.new(100_00, "USD")
   end
+
+  it "should output money in brazilian format" do
+    Money.new(123456789).to_real.should eql("1.234.567,89")
+  end
 end
 
 describe "Actions involving two Money objects" do
