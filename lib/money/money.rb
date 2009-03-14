@@ -205,6 +205,29 @@ class Money
     end
     formatted
   end
+  
+  # Money.new(12345678901).to_real => "123.456.789,01"
+  def to_real
+    return "0,00" if cents == 0
+    tmp_money = cents.to_s.split(//)
+    tmp_cents = tmp_money.pop(2).to_s
+    if tmp_money.empty?
+      return ("%.2f" % (tmp_cents.to_i / 100.0)).gsub(".",",")
+    elsif tmp_money.length <= 3
+      return "#{tmp_money},#{tmp_cents}"
+    end
+    tmp_start = tmp_money.to_s.length % 3
+    tmp_start = tmp_money.shift(tmp_start).to_s
+    tmp_money2 = []
+    tmp_money.to_s.scan(/\d{3}/).each do |v|
+      tmp_money2 += [v]
+    end
+    if tmp_start.empty?
+      return "#{tmp_money2.join('.')},#{tmp_cents}"
+    else
+      return "#{tmp_start}.#{tmp_money2.join('.')},#{tmp_cents}"
+    end
+  end
 
   # Money.ca_dollar(100).to_s => "1.00"
   def to_s
