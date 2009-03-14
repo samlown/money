@@ -12,7 +12,7 @@ module ActsAsMoney #:nodoc:
     # end
     #
     # @product.value.class      #=>  "Money"
-    # @product.value_in_cents   #=>  "1000"
+    # @product.value_cents      #=>  "1000"
     # @product.tax_currency     #=>  "USD"
     #
     # Opts:

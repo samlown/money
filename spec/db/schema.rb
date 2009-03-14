@@ -1,5 +1,3 @@
-require File.dirname(__FILE__) + '/../spec_helper.rb'
-
 ActiveRecord::Schema.define() do
 
   create_table :accounts, :force => true do |t|

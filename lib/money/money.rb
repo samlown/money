@@ -52,7 +52,7 @@ class Money
     Money.new(cents, "EUR")
   end
 
-  # Creates a new Money object of the given value, using the Euro currency.
+  # Creates a new Money object of the given value, using the Brazilian Real currency.
   def self.real(cents)
     Money.new(cents, "BRL")
   end
@@ -129,7 +129,6 @@ class Money
   # Calculates compound interest
   # Returns a money object with the sum of self + it
   def compound_interest(rate,count=1)
-
     Money.new(cents * ((1 + rate / 100.0 / 12) ** count - 1))
   end
 
