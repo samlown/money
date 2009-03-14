@@ -2,3 +2,4 @@
 doc
 *.sqlite3
 *.log
+spec/*.log
