@@ -20,6 +20,8 @@ describe "Money core extensions" do
     it { "100.37".to_money.should == Money.new(100_37) }
     it { "100,37".to_money.should == Money.new(100_37) }
     it { "100 000".to_money.should == Money.new(100_000_00) }
+    it { "100.000,45".to_money.should == Money.new(100_000_45) }
+    it { "-100.100,45".to_money.should == Money.new(-100_100_45) }
 
     it { "100 USD".to_money.should == Money.new(100_00, "USD") }
     it { "-100 USD".to_money.should == Money.new(-100_00, "USD") }
@@ -33,6 +35,9 @@ describe "Money core extensions" do
     it { "CAD -100.37".to_money.should == Money.new(-100_37, "CAD") }
     it { "EUR 100,37".to_money.should == Money.new(100_37, "EUR") }
     it { "EUR -100,37".to_money.should == Money.new(-100_37, "EUR") }
+
+    it { "BRL 100,37".to_money.should == Money.new(100_37, "BRL") }
+    it { "BRL -100,37".to_money.should == Money.new(-100_37, "BRL") }
 
     it {"$100 USD".to_money.should == Money.new(100_00, "USD") }
   end

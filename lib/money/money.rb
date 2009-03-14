@@ -185,16 +185,36 @@ class Money
   # html:
   #
   #  Money.ca_dollar(570).format(:html => true, :with_currency => true) =>  "$5.70 <span class=\"currency\">CAD</span>"
-  def format(rules = {})
-    return "free" if cents == 0
+   def format(*rules)
+    # support for old format parameters
+    rules = normalize_formatting_rules(rules)
 
-    rules = rules.flatten
-
-    if rules.include?(:no_cents)
-      formatted = sprintf("$%d", cents.to_f / 100  )
-    else
-      formatted = sprintf("$%.2f", cents.to_f / 100  )
+    if cents == 0
+      if rules[:display_free].respond_to?(:to_str)
+        return rules[:display_free]
+      elsif rules[:display_free]
+        return "free"
+      end
     end
+
+    if rules.has_key?(:symbol)
+      if rules[:symbol]
+        symbol = rules[:symbol]
+      else
+        symbol = ""
+      end
+    else
+      symbol = "$"
+    end
+
+    if rules[:no_cents]
+      formatted = sprintf("#{symbol}%d", cents.to_f / 100)
+    else
+      formatted = sprintf("#{symbol}%.2f", cents.to_f / 100)
+    end
+
+    # Commify ("10000" => "10,000")
+    formatted.gsub!(/(\d)(?=\d{3}+(?:\.|$))(\d{3}\..*)?/,'\1,\2')
 
     if rules[:with_currency]
       formatted << " "

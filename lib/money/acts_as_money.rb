@@ -22,14 +22,14 @@ module ActsAsMoney #:nodoc:
     # :with_currency => true
     #
     def has_money(*attributes)
-      config = {:with_currency => true, :converter => lambda { |m| m.to_money },
+      config = {:with_currency => true, :converter => lambda { |m| m ||=0; m.to_money },
                 :allow_nil => false }.update(attributes.extract_options!)
 
       attributes.each do |attr|
         mapping = [[config[:cents] || "#{attr}_cents", 'cents']]
         mapping << [config[:currency] || "#{attr}_currency", 'currency'] if config[:with_currency]
 
-        composed_of attr, :class_name => 'Money',:allow_nil => config[:allow_nil],
+        composed_of attr, :class_name => 'Money', :allow_nil => config[:allow_nil],
            :mapping => mapping, :converter => config[:converter]
       end
 
