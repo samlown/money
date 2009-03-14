@@ -21,7 +21,7 @@ Resources:
 
 Install stable releases with the following command:
 
-  gem install ShadowBelmolve-money
+  gem install money
 
 The development version (hosted on Github) can be installed with:
 
