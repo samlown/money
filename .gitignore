@@ -5,3 +5,4 @@ doc
 spec/*.log
 tmp/**/*
 db/**/*
+*.swp

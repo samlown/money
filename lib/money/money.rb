@@ -224,28 +224,25 @@ class Money
     end
     formatted
   end
+
+   def normalize_formatting_rules(rules)
+    if rules.size == 1
+      rules = rules.pop
+      rules = { rules => true } if rules.is_a?(Symbol)
+    else
+      rules = rules.inject({}) do |h,s|
+        h[s] = true
+        h
+      end
+    end
+    rules
+  end
   
   # Money.new(12345678901).to_real => "123.456.789,01"
-  def to_real
-    return "0,00" if cents == 0
-    tmp_money = cents.to_s.split(//)
-    tmp_cents = tmp_money.pop(2).to_s
-    if tmp_money.empty?
-      return ("%.2f" % (tmp_cents.to_i / 100.0)).gsub(".",",")
-    elsif tmp_money.length <= 3
-      return "#{tmp_money},#{tmp_cents}"
-    end
-    tmp_start = tmp_money.to_s.length % 3
-    tmp_start = tmp_money.shift(tmp_start).to_s
-    tmp_money2 = []
-    tmp_money.to_s.scan(/\d{3}/).each do |v|
-      tmp_money2 += [v]
-    end
-    if tmp_start.empty?
-      return "#{tmp_money2.join('.')},#{tmp_cents}"
-    else
-      return "#{tmp_start}.#{tmp_money2.join('.')},#{tmp_cents}"
-    end
+  def to_real(*rules)
+    rules = normalize_formatting_rules(rules)
+    rules[:symbol] = "R$ " if !rules.has_key?(:symbol)
+    format(rules).gsub(/,/,"@").gsub(/\./,",").gsub("@",".")
   end
 
   # Money.ca_dollar(100).to_s => "1.00"
