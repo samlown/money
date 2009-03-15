@@ -22,3 +22,4 @@ spec/money/exchange_bank_spec.rb
 spec/money/money_spec.rb
 spec/spec.opts
 spec/spec_helper.rb
+tmp/acts_as_money.sqlite3

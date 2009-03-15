@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/lib/money'
 # Generate all the Rake tasks
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 $hoe = Hoe.new('money', Money::VERSION) do |p|
-  p.developer('FIXME full name', 'FIXME email')
+  p.developer('Money Team', 'see@readme')
   p.changes              = p.paragraphs_of("History.txt", 0..1).join("\n\n")
   p.rubyforge_name       = p.name
   p.summary = "This library aids one in handling money and different currencies."
@@ -16,7 +16,7 @@ $hoe = Hoe.new('money', Money::VERSION) do |p|
     ['newgem', ">= #{::Newgem::VERSION}"]
   ]
 
-  p.clean_globs |= %w[**/.DS_Store tmp *.log]
+  p.clean_globs |= %w[**/.DS_Store *.log]
   path = (p.rubyforge_name == p.name) ? p.rubyforge_name : "\#{p.rubyforge_name}/\#{p.name}"
   p.remote_rdoc_dir = File.join(path.gsub(/^#{p.rubyforge_name}\/?/,''), 'rdoc')
   p.rsync_args = '-av --delete --ignore-errors'
