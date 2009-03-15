@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require File.dirname(__FILE__) + '/../spec_helper.rb'
 
 describe Money do
@@ -99,13 +100,9 @@ describe Money do
     @money.split_in_installments(3).sum.cents.should eql(1100)
   end
 
-  it "should output as float" do
-    Money.new(10_00).to_f.should eql(10.0)
-  end
+  it {  Money.new(10_00).to_f.should eql(10.0) }
+  it {  Money.new(10_00).to_s.should eql("10.00") }
 
-  it "should output as string" do
-    Money.new(10_00).to_s.should eql("10.00")
-  end
 
   it "should create a new Money object of 0 cents if empty" do
     Money.empty.should == Money.new(0)
@@ -134,21 +131,39 @@ describe Money do
 
   it "Money method missing exchange" do
      Money.add_rate("EUR", "BRL", 10)
-     Money.new(10_00, "EUR").as_brl.currency.should eql("BRL")
+     Money.new(10_00, "EUR").as_brl.should == Money.new(100_00, "BRL")
   end
 
   describe "Format out " do
 
-    before(:each) do
-      @cash = Money.new(200)
+    describe "Options" do
+      before(:each) do
+        @cash = Money.new(200)
+      end
+
+      it { @cash.format.should eql("$2.00") }
+      it { @cash.format(:symbol => "R$ ").should eql("R$ 2.00") }
+      it { @cash.format(:no_cents => true).should eql("$2") }
+      it { @cash.format(:no_cents => true, :symbol => "R$ ").should eql("R$ 2") }
     end
 
-    it { @cash.format.should eql("$2.00") }
-    it { @cash.format(:symbol => "R$ ").should eql("R$ 2.00") }
+    it { Money.new(0).format.should eql("$0.00") }
+    it { Money.new(0).format(:display_free => true).should eql("free") }
+    it { Money.new(0).format(:display_free => "GRATIS").should eql("GRATIS") }
 
-    it { Money.new(200000).format.should eql("$2,000.00") }
-    it { Money.new(2000000).format.should eql("$20,000.00") }
-    it { Money.new(2000000, "BRL").format.should eql("R$20.000,00") }
+    it { Money.new(9).format.should eql("$0.09") }
+    it { Money.new(99).format.should eql("$0.99") }
+    it { Money.new(800).format.should eql("$8.00") }
+    it { Money.new(-8000).format(:no_cents => true).should eql("$-80") }
+    it { Money.new(80000).format.should eql("$800.00") }
+    it { Money.new(800000).format.should eql("$8,000.00") }
+    it { Money.new(-8000000, "JPY").format(:no_cents => true).should eql("¥-80.000") }
+    it { Money.new(87654321, "BRL").format.should eql("R$876.543,21") }
+    it { Money.new(800000000, "BRL").format.should eql("R$8.000.000,00") }
+    it { Money.new(8000000000, "BRL").format.should eql("R$80.000.000,00") }
+    it { Money.new(80000000000, "CAD").format.should eql("$800,000,000.00") }
+    it { Money.new(880000000000, "GBP").format(:no_cents => true).should eql("£8,800,000,000") }
+    it { Money.new(8800000000088, "EUR").format.should eql("€88,000,000,000.88") }
 
   end
 

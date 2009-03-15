@@ -31,7 +31,7 @@ module ActsAsMoney #:nodoc:
         mapping << [config[:currency] || "#{attribute}_currency", 'currency'] if config[:with_currency]
 
         composed_of attribute, :class_name => 'Money', :allow_nil => config[:allow_nil],
-           :mapping => mapping, :converter => lambda { |m| m ? m.to_money(config[:with_cents]) : nil }
+           :mapping => mapping, :converter => lambda { |m| (m||0).to_money(config[:with_cents]) }
       end
 
     end

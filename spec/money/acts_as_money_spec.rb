@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper.rb'
 require File.dirname(__FILE__) + '/../../rails/init.rb'
 
 # Uncomment this once to create the db
-#load_schema
+# load_schema
 
 class Account < ActiveRecord::Base
   has_money :value, :total, :allow_nil => true
@@ -12,28 +12,25 @@ class Product < ActiveRecord::Base
   has_money :value, :allow_nil => false
   has_money :tax, :cents => "pennys", :with_currency => false
 
-  validates_presence_of :value
+  validates_numericality_of :value_cents, :greater_than => 0
 end
 
 describe "Acts as Money" do
 
-  it "should require money" do
-        pending
+  it "should accept nil" do
     @account = Account.create(:value => nil)
-    @account.should have(1).errors
+    @account.should be_valid
+    @account.value.should be_nil
   end
 
   it "should require money" do
-        pending
     @product = Product.create(:value => nil)
-
     @product.should have(1).errors
+    @product.value.should == Money.new(0)
   end
 
   it "should require money" do
-        pending
     @product_fake = Product.create(:value => nil)
-
     @product_fake.value_cents.should eql(0)
   end
 

@@ -34,10 +34,9 @@ class Money
     "HKD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
     "SGD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
     "BRL" => { :delimiter => ".", :separator => ",", :symbol => "R$" },
-    "EUR" => { :delimiter => ",", :separator => ".", :symbol => ['€', '&euro;'] },
-    "GBP" => { :delimiter => ",", :separator => ".", :symbol => ['£', '&pound;'] },
-    "JPY" => { :delimiter => ".", :separator => ".", :symbol => ['¥', '&yen;'] },
-
+    "EUR" => { :delimiter => ",", :separator => ".", :symbol => '€', :html => '&euro;' },
+    "GBP" => { :delimiter => ",", :separator => ".", :symbol => '£', :html => '&pound;' },
+    "JPY" => { :delimiter => ".", :separator => ".", :symbol => '¥', :html => '&yen;' },
   }
   self.default_bank = VariableExchangeBank.instance
   self.default_currency = "USD"
