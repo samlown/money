@@ -28,6 +28,17 @@ class Money
     attr_accessor :default_currency
   end
 
+  CURRENCIES = {
+    "USD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
+    "CAD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
+    "HKD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
+    "SGD" => { :delimiter => ",", :separator => ".", :symbol => "$" },
+    "BRL" => { :delimiter => ".", :separator => ",", :symbol => "R$" },
+    "EUR" => { :delimiter => ",", :separator => ".", :symbol => ['€', '&euro;'] },
+    "GBP" => { :delimiter => ",", :separator => ".", :symbol => ['£', '&pound;'] },
+    "JPY" => { :delimiter => ".", :separator => ".", :symbol => ['¥', '&yen;'] },
+
+  }
   self.default_bank = VariableExchangeBank.instance
   self.default_currency = "USD"
 
@@ -67,7 +78,7 @@ class Money
   # Alternativly you can use the convinience methods like
   # Money.ca_dollar and Money.us_dollar
   def initialize(cents, currency = Money.default_currency, bank = Money.default_bank)
-    @cents = cents ? cents.round : 0
+    @cents = cents.round
     @currency = currency
     @bank = bank
   end
@@ -137,11 +148,11 @@ class Money
     Money.new(rate/100/12*cents*count)
   end
 
-  def with_simple_interest(rate,count=1)
-  end
-
-  # Split money in installments
-  # So US$ 10.00 == [ 3.34, 3.33, 3.33 ]
+  # Split money in number of installments
+  #
+  # Money.new(10_00).split_in_installments(3)
+  # => [ 3.34, 3.33, 3.33 ]  (All Money instances)
+  #
   def split_in_installments(fixnum,extra=nil,*opts)
     wallet = Wallet.new(fixnum, Money.new(cents/fixnum,currency))
     to_add = cents % fixnum
@@ -150,13 +161,17 @@ class Money
   end
 
   # Split money in installments based on payment value
+  #
+  # Money.new(1000_00).split_in_installments(Money.new(300_00))
+  # => [ 334_00, 333_00, 333_00 ]  (All Money instances)
+  #
   def in_installments_of(other_money,first=false)
     split_in_installments(cents/other_money.cents,first)
   end
 
   # Just a helper if you got tax inputs in percentage.
-  # Ie. with_tax(20) =>  cents * 1.20
-  def with_tax(tax)
+  # Ie. add_tax(20) =>  cents * 1.20
+  def add_tax(tax)
     Money.new(cents + cents / 100 * tax)
   end
 
@@ -204,17 +219,17 @@ class Money
         symbol = ""
       end
     else
-      symbol = "$"
+      symbol = CURRENCIES[currency][:symbol]
     end
 
     if rules[:no_cents]
       formatted = sprintf("#{symbol}%d", cents.to_f / 100)
+      formatted.gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
     else
-      formatted = sprintf("#{symbol}%.2f", cents.to_f / 100)
+      formatted = sprintf("#{symbol}%.2f", cents.to_f / 100).split('.')
+      formatted[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
+      formatted = formatted.join(CURRENCIES[currency][:separator])
     end
-
-    # Commify ("10000" => "10,000")
-    formatted.gsub!(/(\d)(?=\d{3}+(?:\.|$))(\d{3}\..*)?/,'\1,\2')
 
     if rules[:with_currency]
       formatted << " "
@@ -224,6 +239,20 @@ class Money
     end
     formatted
   end
+
+   def normalize_formatting_rules(rules)
+    if rules.size == 1
+      rules = rules.pop
+      rules = { rules => true } if rules.is_a?(Symbol)
+    else
+      rules = rules.inject({}) do |h,s|
+        h[s] = true
+        h
+      end
+    end
+    rules
+  end
+
 
   # Money.ca_dollar(100).to_s => "1.00"
   def to_s
@@ -240,33 +269,17 @@ class Money
     Money.new(@bank.exchange(self.cents, currency, other_currency), other_currency)
   end
 
-  # Recieve a money object with the same amount as the current Money object
-  # in american dollar
-  def as_us_dollar
-    exchange_to("USD")
-  end
-
-  # Recieve a money object with the same amount as the current Money object
-  # in canadian dollar
-  def as_ca_dollar
-    exchange_to("CAD")
-  end
-
-  # Recieve a money object with the same amount as the current Money object
-  # in euro
-  def as_euro
-    exchange_to("EUR")
-  end
-
-  # Recieve a money object with the same amount as the current Money object
-  # in real
-  def as_real
-    exchange_to("BRL")
-  end
-
   # Conversation to self
   def to_money
     self
+  end
+
+  def method_missing(m,*x)
+    if m.to_s =~ /^as/
+      exchange_to(m.to_s.split("_").last.upcase)
+    else
+      super
+    end
   end
 end
 
