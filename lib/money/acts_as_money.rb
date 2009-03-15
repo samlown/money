@@ -22,7 +22,7 @@ module ActsAsMoney #:nodoc:
     # :with_currency => true
     #
     def has_money(*attributes)
-      config = {:with_currency => true, :converter => lambda { |m| m ||=0; m.to_money },
+      config = {:with_currency => true, :converter => lambda { |m| m ||=0; (m) ? m.to_money : "0".to_money },
                 :allow_nil => false }.update(attributes.extract_options!)
 
       attributes.each do |attr|

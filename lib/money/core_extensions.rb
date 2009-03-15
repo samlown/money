@@ -1,11 +1,20 @@
 class Numeric
   # Converts this numeric to a Money object in the default currency. It
-  # multiplies the numeric value by 100 and treats that as cents.
+  # multiplies the numeric value by 100 and treats that as cents if receive false.
   #
-  #   100.to_money => #<Money @cents=10000>
+  #   100.to_money => #<Money @cents=100>
   #   100.37.to_money => #<Money @cents=10037>
-  def to_money
-    Money.new(self * 100)
+  #   100.to_money(false) => #<Money @cents=10000>
+  def to_money(cents = true)
+    if cents
+      if self.is_a? Integer
+        Money.new(self)
+      else
+        Money.new(self.to_s.gsub(/\./,'').to_i)
+      end
+    else
+      Money.new(self * 100)
+    end
   end
 end
 
@@ -13,22 +22,23 @@ class String
   # Parses the current string and converts it to a Money object.
   # Excess characters will be discarded.
   #
-  #   '100'.to_money       # => #<Money @cents=10000>
+  #   '100'.to_money       # => #<Money @cents=100>
   #   '100.37'.to_money    # => #<Money @cents=10037>
-  #   '100 USD'.to_money   # => #<Money @cents=10000, @currency="USD">
-  #   'USD 100'.to_money   # => #<Money @cents=10000, @currency="USD">
-  #   '$100 USD'.to_money   # => #<Money @cents=10000, @currency="USD">
-  def to_money
+  #   '100 USD'.to_money   # => #<Money @cents=100, @currency="USD">
+  #   'USD 100'.to_money   # => #<Money @cents=100, @currency="USD">
+  #   '$100 USD'.to_money   # => #<Money @cents=100, @currency="USD">
+  #   '$100 USD'.to_money(false) # => #<Money @cents=10000, @currency="USD">
+  def to_money(with_cents = true)
     # Get the currency.
     matches = scan /([A-Z]{2,3})/
     currency = matches[0] ? matches[0][0] : Money.default_currency
-    cents = calculate_cents(self)
+    cents = calculate_cents(self, with_cents)
     Money.new(cents, currency)
   end
 
   private
 
-  def calculate_cents(number)
+  def calculate_cents(number, with_cents = true)
     # remove anything that's not a number, potential delimiter, or minus sign
     num = number.gsub(/[^\d|\.|,|\'|\s|\-]/, '').strip
 
@@ -115,7 +125,12 @@ class String
 
     # build the string based on major/minor since separator/delimiters have been removed
     # transform to a float, multiply by 100 to convert to cents
-    cents = "#{major}.#{minor}".to_f * 100
+    if with_cents and minor == 0
+      cents = "#{major}.#{minor}".to_f
+    else
+      cents = "#{major}.#{minor}".to_f * 100
+    end
+
 
     # if negative, multiply by -1; otherwise, return positive cents
     negative ? cents * -1 : cents
