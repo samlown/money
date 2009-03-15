@@ -19,10 +19,11 @@ module ActsAsMoney #:nodoc:
     # :cents => "pennys"        #=>  @product.pennys
     # :currency => "currency"   #=>  @product.currency
     # :allow_nil => true
-    # :with_currency => true
+    # :with_currency => false
+    # :with_cents => true       #=>  1000.to_money #=> #<Money @cents=1000>
     #
     def has_money(*attributes)
-      config = {:with_currency => true, :converter => lambda { |m| m ||=0; (m) ? m.to_money : "0".to_money },
+      config = {:with_currency => true, :with_cents => false,
                 :allow_nil => false }.update(attributes.extract_options!)
 
       attributes.each do |attr|
@@ -30,7 +31,7 @@ module ActsAsMoney #:nodoc:
         mapping << [config[:currency] || "#{attr}_currency", 'currency'] if config[:with_currency]
 
         composed_of attr, :class_name => 'Money', :allow_nil => config[:allow_nil],
-           :mapping => mapping, :converter => config[:converter]
+           :mapping => mapping, :converter => lambda { |m| (m) ? m.to_money(config[:with_cents]) : "0".to_money(config[:with_cents]) }
       end
 
     end

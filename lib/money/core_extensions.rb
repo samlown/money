@@ -5,7 +5,7 @@ class Numeric
   #   100.to_money => #<Money @cents=100>
   #   100.37.to_money => #<Money @cents=10037>
   #   100.to_money(false) => #<Money @cents=10000>
-  def to_money(cents = true)
+  def to_money(cents = false)
     if cents
       if self.is_a? Integer
         Money.new(self)
@@ -28,7 +28,7 @@ class String
   #   'USD 100'.to_money   # => #<Money @cents=100, @currency="USD">
   #   '$100 USD'.to_money   # => #<Money @cents=100, @currency="USD">
   #   '$100 USD'.to_money(false) # => #<Money @cents=10000, @currency="USD">
-  def to_money(with_cents = true)
+  def to_money(with_cents = false)
     # Get the currency.
     matches = scan /([A-Z]{2,3})/
     currency = matches[0] ? matches[0][0] : Money.default_currency
