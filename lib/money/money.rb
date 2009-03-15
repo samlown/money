@@ -67,7 +67,7 @@ class Money
   # Alternativly you can use the convinience methods like
   # Money.ca_dollar and Money.us_dollar
   def initialize(cents, currency = Money.default_currency, bank = Money.default_bank)
-    @cents = cents.round # ? cents.round : 0
+    @cents = cents ? cents.round : 0
     @currency = currency
     @bank = bank
   end
