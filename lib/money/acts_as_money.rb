@@ -24,7 +24,7 @@ module ActsAsMoney #:nodoc:
     #
     def has_money(*attributes)
       config = {:with_currency => true, :with_cents => false,
-                :allow_nil => true }.update(attributes.extract_options!)
+                :allow_nil => false }.update(attributes.extract_options!)
 
       for attribute in attributes do
         mapping = [[config[:cents] || "#{attribute}_cents", 'cents']]

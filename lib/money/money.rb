@@ -77,7 +77,7 @@ class Money
   # Alternativly you can use the convinience methods like
   # Money.ca_dollar and Money.us_dollar
   def initialize(cents, currency = Money.default_currency, bank = Money.default_bank)
-    @cents = cents.round
+    @cents = (cents.is_a?(Integer) or cents.is_a?(Float)) ? cents.round : 0
     @currency = currency
     @bank = bank
   end
@@ -220,14 +220,15 @@ class Money
     else
       symbol = CURRENCIES[currency][:symbol]
     end
+    self.currency
 
     if rules[:no_cents]
       formatted = sprintf("#{symbol}%d", cents.to_f / 100)
-      formatted.gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
+      formatted.gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency || Money.default_currency][:delimiter]}")
     else
       formatted = sprintf("#{symbol}%.2f", cents.to_f / 100).split('.')
-      formatted[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
-      formatted = formatted.join(CURRENCIES[currency][:separator])
+      formatted[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency || Money.default_currency][:delimiter]}")
+      formatted = formatted.join(CURRENCIES[currency || Money.default_currency][:separator])
     end
 
     # Commify ("10000" => "10,000")
@@ -240,7 +241,7 @@ class Money
       formatted << '</span>' if rules[:html]
     end
     formatted
-  end
+   end
 
    def normalize_formatting_rules(rules)
     if rules.size == 1
