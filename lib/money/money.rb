@@ -78,7 +78,7 @@ class Money
   # Money.ca_dollar and Money.us_dollar
   def initialize(cents, currency = Money.default_currency, bank = Money.default_bank)
     @cents = cents.to_i
-    @currency = currency
+    @currency = currency || default_currency
     @bank = bank
   end
 
@@ -224,11 +224,11 @@ class Money
 
     if rules[:no_cents]
       formatted = sprintf("#{symbol}%d", cents.to_f / 100)
-      formatted.gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency || Money.default_currency][:delimiter]}")
+      formatted.gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
     else
       formatted = sprintf("#{symbol}%.2f", cents.to_f / 100).split('.')
-      formatted[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency || Money.default_currency][:delimiter]}")
-      formatted = formatted.join(CURRENCIES[currency || Money.default_currency][:separator])
+      formatted[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1#{CURRENCIES[currency][:delimiter]}")
+      formatted = formatted.join(CURRENCIES[currency][:separator])
     end
 
     # Commify ("10000" => "10,000")
