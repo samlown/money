@@ -68,7 +68,7 @@ class Money
       if !@rates[from_currency] or !@rates[to_currency]
         raise Money::UnknownRate, "No conversion rate known for '#{from_currency}' -> '#{to_currency}'"
       end
-      ((cents / @rates[from_currency]) * @rates[to_currency]).floor
+      ((cents / @rates[from_currency]) * @rates[to_currency]).round
     end
 
     def create_rates

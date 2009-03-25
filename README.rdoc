@@ -56,16 +56,16 @@ Exchanging money is performed through an exchange bank object. The default
 exchange bank object requires one to manually specify the exchange rate. Here's
 an example of how it works:
 
-  Money.add_rate("USD", "CAD", 1.24515)
-  Money.add_rate("CAD", "USD", 0.803115)
+  Money.add_rate("CAD", 1.24515)
+  Money.add_rate("USD", 0.803115)
 
   Money.us_dollar(100).exchange_to("CAD")  # => Money.new(124, "CAD")
   Money.ca_dollar(100).exchange_to("USD")  # => Money.new(80, "USD")
 
 or
 
-  Money.us_dollar(100).to_cad              # => Money.new(124, "CAD")
-  Money.ca_dollar(100).to_usd              # => Money.new(80, "USD")
+  Money.us_dollar(100).to_cad              # => Money.new(123, "CAD")
+  Money.ca_dollar(123).to_usd              # => Money.new(100, "USD")
 
 Comparison and arithmetic operations work as expected:
 
@@ -74,6 +74,8 @@ Comparison and arithmetic operations work as expected:
 
   Money.add_rate("USD", "EUR", 0.5)
   Money.new(1000, "EUR") + Money.new(1000, "USD") == Money.new(1500, "EUR")
+
+By default, fetch the exchange rates published by the European Bank
 
 There is nothing stopping you from creating bank objects which scrapes
 www.xe.com for the current rates or just returns <tt>rand(2)</tt>:
