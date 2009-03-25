@@ -1,5 +1,7 @@
 require 'thread'
 require 'money/errors'
+require 'net/http'
+require 'rexml/document'
 
 # Class for aiding in exchanging money between different currencies.
 # By default, the Money class uses an object of this class (accessible through
@@ -26,24 +28,25 @@ class Money
       @@singleton
     end
     
-    def initialize
+    def initialize(file = nil)
       @rates = {}
-      @mutex = Mutex.new
-    end
-    
-    # Registers a conversion rate. +from+ and +to+ are both currency names.
-    def add_rate(from, to, rate)
-      @mutex.synchronize do
-        @rates["#{from}_TO_#{to}".upcase] = rate
+      @xml = 
+      if file and file.readable?
+        File.open(file) do |f|
+          @xml = REXML::Document.new(f.read)
+        end
+      else
+        @xml = REXML::Document.new(
+          Net::HTTP.get(
+            URI.parse('http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml')
+                     )
+        )
       end
+      create_rates
     end
-    
-    # Gets the rate for exchanging the currency named +from+ to the currency
-    # named +to+. Returns nil if the rate is unknown.
-    def get_rate(from, to)
-      @mutex.synchronize do
-        @rates["#{from}_TO_#{to}".upcase] 
-      end
+
+    def add_rate(currency, rate)
+      @rates[currency.upcase] = (currency.upcase != "USD") ? (rate * @rates["USD"]) : rate
     end
     
     # Given two currency names, checks whether they're both the same currency.
@@ -60,11 +63,19 @@ class Money
     #
     # If the conversion rate is unknown, then Money::UnknownRate will be raised.
     def exchange(cents, from_currency, to_currency)
-      rate = get_rate(from_currency, to_currency)
-      if !rate
+      from_currency.upcase!
+      to_currency.upcase!
+      if !@rates[from_currency] or !@rates[to_currency]
         raise Money::UnknownRate, "No conversion rate known for '#{from_currency}' -> '#{to_currency}'"
       end
-      (cents * rate).floor
+      ((cents / @rates[from_currency]) * @rates[to_currency]).floor
+    end
+
+    def create_rates
+      @rates["EUR"] = 1.0
+      @xml.elements.each('//Cube') do |ele|
+        @rates[ele.attributes['currency'].upcase] = ele.attributes['rate'].to_f if ele.attributes['currency']
+      end
     end
     
     @@singleton = VariableExchangeBank.new

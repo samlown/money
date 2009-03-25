@@ -67,8 +67,8 @@ class Money
     Money.new(cents, "BRL")
   end
 
-  def self.add_rate(from_currency, to_currency, rate)
-    Money.default_bank.add_rate(from_currency, to_currency, rate)
+  def self.add_rate(currency, rate)
+    Money.default_bank.add_rate(currency, rate)
   end
 
   # Creates a new money object.
