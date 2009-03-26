@@ -1,4 +1,3 @@
-require 'thread'
 require 'money/errors'
 require 'net/http'
 require 'rexml/document'
@@ -28,21 +27,9 @@ class Money
       @@singleton
     end
     
-    def initialize(file = nil)
+    def initialize
       @rates = {}
-      @xml = 
-      if file and file.readable?
-        File.open(file) do |f|
-          @xml = REXML::Document.new(f.read)
-        end
-      else
-        @xml = REXML::Document.new(
-          Net::HTTP.get(
-            URI.parse('http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml')
-                     )
-        )
-      end
-      create_rates
+      fetch_rates
     end
 
     def add_rate(currency, rate)
@@ -70,18 +57,42 @@ class Money
     def exchange(cents, from_currency, to_currency)
       from_currency.upcase!
       to_currency.upcase!
-      if !@rates[from_currency] or !@rates[to_currency]
+      if !@rates[from_currency] or !@rates[to_currency]        
         raise Money::UnknownRate, "No conversion rate known for '#{from_currency}' -> '#{to_currency}'"
       end
       ((cents / @rates[from_currency]) * @rates[to_currency]).round
     end
 
+    # Fetch rates
+    def fetch_rates
+      @xml = REXML::Document.new(
+        Net::HTTP.get(
+          URI.parse('http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml')
+                     )
+             )
 
-    def create_rates
       @rates["EUR"] = 1.0
       @xml.elements.each('//Cube') do |ele|
         @rates[ele.attributes['currency'].upcase] = ele.attributes['rate'].to_f if ele.attributes['currency']
       end
+    end
+
+
+    # Auto fetch the currencies every X seconds
+    # if no time is give, will fetch every hour
+    def auto_fetch(time = 60*60)
+      @auto_fetch.kill if (@auto_fetch && @auto_fetch.alive?)
+      @auto_fetch = Thread.new {
+        loop do
+          self.fetch_rates
+          sleep time
+        end
+      }
+    end
+
+    # stop auto fetch
+    def stop_fetch
+      @auto_fetch.kill if (@auto_fetch && @auto_fetch.alive?)
     end
     
     @@singleton = VariableExchangeBank.new
