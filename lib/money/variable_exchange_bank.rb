@@ -1,6 +1,7 @@
 require 'money/errors'
 require 'net/http'
-require 'rexml/document'
+require 'rubygems'
+require 'hpricot'
 
 # Class for aiding in exchanging money between different currencies.
 # By default, the Money class uses an object of this class (accessible through
@@ -29,7 +30,7 @@ class Money
     
     def initialize
       @rates = {}
-      @rates[Money.default_currency] = 1.0
+      @rates["USD"] = 1.0
     end
 
     def add_rate(currency, rate)
@@ -65,15 +66,15 @@ class Money
 
     # Fetch rates
     def fetch_rates
-      @xml = REXML::Document.new(
+      xml = Hpricot.XML(
         Net::HTTP.get(
           URI.parse('http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml')
                      )
              )
 
       @rates["EUR"] = 1.0
-      @xml.elements.each('//Cube') do |ele|
-        @rates[ele.attributes['currency'].upcase] = ele.attributes['rate'].to_f if ele.attributes['currency']
+      (xml/:Cube).each do |ele|
+        @rates[ele['currency'].upcase] = ele['rate'].to_f if ele['currency']
       end
     end
 
