@@ -11,13 +11,13 @@ require 'rexml/document'
 # exchanges with +exchange+. For example:
 #
 #  bank = Money::VariableExchangeBank.new
-#  bank.add_rate("USD", "CAD", 1.24515)
-#  bank.add_rate("CAD", "USD", 0.803115)
+#  bank.add_rate("CAD", 0.803115)
+#  bank.add_rate("USD", 1.24515)
 #  
 #  # Exchange 100 CAD to USD:
-#  bank.exchange(100_00, "CAD", "USD")  # => 124
+#  bank.exchange(100_00, "CAD", "USD")  # => 15504
 #  # Exchange 100 USD to CAD:
-#  bank.exchange(100_00, "USD", "CAD")  # => 80
+#  bank.exchange(100_00, "USD", "CAD")  # => 6450
 class Money
   class VariableExchangeBank
     # Returns the singleton instance of VariableExchangeBank.
@@ -29,16 +29,16 @@ class Money
     
     def initialize
       @rates = {}
-      fetch_rates
+      @rates[Money.default_currency] = 1.0
     end
 
     def add_rate(currency, rate)
-      @rates[currency.upcase] = (currency.upcase != "USD") ? (rate * @rates["USD"]) : rate
+      @rates[currency.upcase] = (currency.upcase != Money.default_currency) ? (rate * @rates[Money.default_currency]) : rate
     end
 
     def get_rate(currency = nil)
       return nil unless @rates[currency]
-      (currency != "USD") ? @rates[currency.upcase] / @rates["USD"] : @rates[currency.upcase]
+      (currency != Money.default_currency) ? @rates[currency.upcase] / @rates[Money.default_currency] : @rates[currency.upcase]
     end
     
     # Given two currency names, checks whether they're both the same currency.
