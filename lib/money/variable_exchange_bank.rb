@@ -48,6 +48,11 @@ class Money
     def add_rate(currency, rate)
       @rates[currency.upcase] = (currency.upcase != "USD") ? (rate * @rates["USD"]) : rate
     end
+
+    def get_rate(currency = nil)
+      return nil unless @rates[currency]
+      (currency != "USD") ? @rates[currency.upcase] / @rates["USD"] : @rates[currency.upcase]
+    end
     
     # Given two currency names, checks whether they're both the same currency.
     #
@@ -70,6 +75,7 @@ class Money
       end
       ((cents / @rates[from_currency]) * @rates[to_currency]).round
     end
+
 
     def create_rates
       @rates["EUR"] = 1.0

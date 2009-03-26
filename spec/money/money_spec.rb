@@ -133,12 +133,14 @@ describe Money do
   describe "Taxes and Interest" do
 
     it "Money.add_rate works" do
-      Money.add_rate("EUR", "USD", 10)
-      Money.new(10_00, "EUR").exchange_to("USD").should == Money.new(100_00, "USD")
+      Money.add_rate("USD", 1.0)
+      Money.add_rate("EUR", 10)
+      Money.new(10_00, "EUR").exchange_to("USD").should == Money.new(1_00, "USD")
     end
 
     it "Money method missing exchange" do
-      Money.add_rate("EUR", "BRL", 10)
+      Money.add_rate("EUR", 1.0)
+      Money.add_rate("BRL", 10)
       Money.new(10_00, "EUR").as_brl.should == Money.new(100_00, "BRL")
     end
 
