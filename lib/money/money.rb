@@ -266,6 +266,11 @@ class Money
     sprintf("%.2f", cents / 100.0)
   end
 
+  # Money.new(123).to_i => "100"
+  def to_i
+    cents
+  end
+
   # Money.ca_dollar(100).to_f => "1.0"
   def to_f
     cents / 100.0
