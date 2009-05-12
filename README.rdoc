@@ -50,6 +50,10 @@ The development version (hosted on Github) can be installed with:
   Money.new(1000, "USD") == Money.new( 100, "USD")   # => false
   Money.new(1000, "USD") == Money.new(1000, "EUR")   # => false
 
+  # Comparisons with other numbers
+  Money.new(10.10) > 10.0     # => true
+  Money.new(1001) > 10        # => true
+
 
 === Currency Exchange
 
