@@ -96,7 +96,7 @@ class Money
         cents <=> other_money.exchange_to(currency).cents
       end
     when Numeric
-      cents <=> other_money
+      cents <=> (other_money * 100).to_i
     else
       raise "Comparison attempted with incompatible Money type"
     end
