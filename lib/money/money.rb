@@ -88,10 +88,17 @@ class Money
   end
 
   def <=>(other_money)
-    if bank.same_currency?(currency, other_money.currency)
-      cents <=> other_money.cents
+    case other_money
+    when Money
+      if bank.same_currency?(currency, other_money.currency)
+        cents <=> other_money.cents
+      else
+        cents <=> other_money.exchange_to(currency).cents
+      end
+    when Numeric
+      cents <=> other_money
     else
-      cents <=> other_money.exchange_to(currency).cents
+      raise "Comparison attempted with incompatible Money type"
     end
   end
 
@@ -266,9 +273,9 @@ class Money
     sprintf("%.2f", cents / 100.0)
   end
 
-  # Money.new(123).to_i => "100"
+  # Money.new(123).to_i => "1"
   def to_i
-    cents
+    (cents / 100.0).round
   end
 
   # Money.ca_dollar(100).to_f => "1.0"
