@@ -53,6 +53,7 @@ The development version (hosted on Github) can be installed with:
   # Comparisons with other numbers
   Money.new(10.10) > 10.0     # => true
   Money.new(1001) > 10        # => true
+  Money.new(999) > 10         # => false
 
 
 === Currency Exchange

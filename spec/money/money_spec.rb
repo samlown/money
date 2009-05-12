@@ -253,12 +253,14 @@ describe Money do
       (Money.new(1_00) <=> 1).should == 0
       (Money.new(1_00) <=> 2).should == -1
       (Money.new(1_00) <=> -1).should == 1
+      (Money.new(10_01) <=> 10).should == 1
     end
 
     it "#<=> compares float amounts" do
       (Money.new(1_00) <=> 1.0).should == 0
       (Money.new(1_00) <=> 2.0).should == -1
       (Money.new(1_00) <=> 0.5).should == 1
+      (Money.new(10_01) <=> 10.0).should == 1 
     end
   end
 end
